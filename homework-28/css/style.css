@@ -1,0 +1,27 @@
+.opensan {
+    font-family: "Open Sans", serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.trought {
+    text-decoration: line-through;
+}
+
+.centr {
+    text-align: center;
+}
+
+.litter {
+    word-spacing: 30px;
+    color: #bf0ec5;
+    text-decoration: wavy;
+}
+
+.word {
+    letter-spacing: 5px;
+    text-decoration: double;
+    
+}
