@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+.box {
+    border: 1px solid #000;
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+    overflow: auto;
+    height: 500px;
+    width: 900px;
+    background: #d3dff1;
+}
+
+.minibox {
+    border: 1px solid #000;
+    border-radius: 20px 20px 20px 20px;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 5px;
+    background: rgb(179, 150, 114);
+    box-shadow: inset 0 0 10px #535151;
+}
