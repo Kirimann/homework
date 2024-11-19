@@ -17,11 +17,11 @@
 .litter {
     word-spacing: 30px;
     color: #bf0ec5;
-    text-decoration: wavy;
+    text-decoration:overline wavy;
 }
 
 .word {
     letter-spacing: 5px;
-    text-decoration: double;
+    text-decoration:underline double;
     
 }
