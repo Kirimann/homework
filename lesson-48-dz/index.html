@@ -14,22 +14,22 @@
         <fieldset>
             <legend>ФИО</legend>
             <label>Фамилия
-                <input type="text">
+                <input type="text" placeholder="Иванов"  required>
             </label>
             <label>Имя
-                <input type="text">
+                <input type="text" placeholder="Иван" required>
             </label>
             <label>Отчество
-                <input type="text">
+                <input type="text" placeholder="Иванович" required>
             </label>
         </fieldset>
         <fieldset>
             <legend>Контактные данные </legend>
             <label>Телефон
-                <input type="text">
+                <input type="tel" required>
             </label>
             <label>Емэйл
-                <input type="text">
+                <input type="email" required>
             </label>
             <label>Адрес
                 <input type="text">
@@ -39,24 +39,16 @@
             <legend>Информация</legend>
             <label>Образование
                 <select name="Aducation" id="">
-                    <option value="">--- Выбрпть ---</option>
+                    <option value="">--- Выбрать ---</option>
                     <option value="Среднее">Среднее</option>
                     <option value="Средне-специальное">Средне-специальное</option>
                     <option value="Высшее">Высшее</option>
                     <option value="Наиумнейшый">Анатолий Вассерман</option>
                 </select>
             </label>
-            <label>Пол
-                <select name="Sex" id="">
-                    <option value="">--- Выбрпть ---</option>
-                    <option value="Муж">Муж</option>
-                    <option value="Жен">Жен</option>
-                    <option value="Трансгендер">Трансгендер</option>
-                </select>
-            </label>
-            <label>Возраст
+                <label>Возраст
                 <select name="Years" id="">
-                    <option value="">--- Выбрпть ---</option>
+                    <option value="">--- Выбрать ---</option>
                     <option value="18-24">18-24</option>
                     <option value="25-30">25-30</option>
                     <option value="31-39">31-39</option>
@@ -65,21 +57,31 @@
                     <option value="999+">Я БЕСМЕРТНЫЙ!</option>
                 </select>
             </label>
+            <label>Желаемая должность
+                <select name="Years" id="">
+                    <option value="">--- Выбрать ---</option>
+                    <option value="Продавец">Продавец</option>
+                    <option value="Зам зав секции">Зам зав секции</option>
+                    <option value="Зав секции">ав секции</option>
+                    <option value="зам директора">зам директора</option>
+                    <option value="Директор">Директор</option>
+                    <option value="Повелитель Мира!">Повелитель Мира!</option>
+                </select>
+            </label>
         </fieldset>
-        <label>Желаемая должность
-            <select name="Years" id="">
-                <option value="">--- Выбрпть ---</option>
-                <option value="Продавец">Продавец</option>
-                <option value="Зам зав секции">Зам зав секции</option>
-                <option value="Зав секции">ав секции</option>
-                <option value="зам директора">зам директора</option>
-                <option value="Директор">Директор</option>
-                <option value="Повелитель Мира!">Повелитель Мира!</option>
-            </select>
+        <br>
+        <label>Пол
         </label>
+        <br>
+        <input type="radio" name="Sex" id=""> Муж
+        <br>
+        <input type="radio" name="Sex" id=""> Жен
+        <br>
+        <input type="radio" name="Sex" id=""> Трансгендер
 <br>
-        <button>Отправить</button>
-        <button>Очистить</button>
+<br>
+        <button type="submit">Отправить</button>
+        <button type="reset">Очистить</button>
     </form>
 </body>
 
