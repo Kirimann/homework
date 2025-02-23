@@ -146,7 +146,7 @@
     display: block;
 }
 
-.modal__form-label span {
+.field span {
     position: absolute;
     top: 12px;
     left: 28px;

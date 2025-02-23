@@ -98,7 +98,7 @@
 
 new Swiper('.gallery__slider', {
 
-        spaceBetween: 32,
+        spaceBetween: 20,
         slidesPerView: 3,
 
         pagination: {
@@ -157,5 +157,9 @@ new Swiper('.gallery__slider', {
         },
 
     });
+
+    const telInputs = document.querySelectorAll('input[type="tel"]')
+    const im = new Inputmask('+375 (99) 999-99-99')
+    im.mask(telInputs);
 
 })() 
