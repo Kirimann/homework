@@ -593,7 +593,7 @@
     position: relative;
 }
 
-.contact__img::before { 
+.contact__inner::before { 
     content: url("..//img/decor/berries.png");
     position: absolute;
     top: 0%;
@@ -616,8 +616,6 @@
 .contact__text {
     margin-bottom: 40px;
 }
-
-.contact__form {}
 
 .contact__label {
     margin-bottom: 10px;
@@ -929,6 +927,10 @@
     }
 
     /* ---------------- */
+
+    .contact__inner::before {
+        display: none;
+    }
 
     .footer__inner {
         grid-template: none;
