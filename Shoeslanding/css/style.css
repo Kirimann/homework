@@ -4,11 +4,6 @@
     --accenr-text: #5CBE3A;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5vw;
-}
-
 .body {
     font-family: "Raleway", serif;
     line-height: 1.5;
@@ -31,17 +26,73 @@ html {
     height: 100%;
 }
 
+.burger-icon {
+    display: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+}
+
+.burger-icon span,
+.burger-icon span::after,
+.burger-icon span::before {
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    background: var(--general-text);
+    transition: var(--transition);
+}
+
+.burger-icon span {
+
+    position: relative;
+}
+
+.burger-icon span::after,
+.burger-icon span::before {
+    content: '';
+    position: absolute;
+}
+
+.burger-icon span::after {
+    bottom: -8px;
+}
+
+.burger-icon span::before {
+    top: -8px;
+
+}
+
+.body--opened-menu .burger-icon span {
+    background: transparent;
+}
+
+.body--opened-menu .burger-icon span::before {
+    top: 0px;
+    transform: rotate(45deg);
+}
+
+
+.body--opened-menu .burger-icon span::after {
+    bottom: 0px;
+    transform: rotate(-45deg);
+}
+
 /* =============================================== */
 
 .header {
     background-color: #EBFFE4;
     margin-bottom: 115px;
+    height: 100%;
 }
 
 .header__top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding-top: 44px;
     margin-bottom: 120px;
 }
@@ -76,7 +127,8 @@ html {
 
 .hero__inner {
     display: flex;
-    gap: 123px;
+    gap: 63px;
+    justify-content: space-between;
 }
 
 .hero__content {
@@ -87,7 +139,6 @@ html {
 }
 
 .hero__slogan {
-    display: flex;
     font-weight: 600;
     line-height: 1.4;
     font-size: 22px;
@@ -171,49 +222,118 @@ html {
 
 .hero__img {
     position: relative;
-    max-width: 720px;
 }
 
 .line {
+    max-height: 140%;
+    height: auto;
     position: absolute;
-    top: -395px;
-    right: -1020px;
-    z-index: 8;
+    bottom: 150px;
+    right: -445px;
+    z-index: 1;
 }
 
-.img__sale {
-    position: absolute;
-    top: 63px;
-    left: -11px;
-    z-index: 10;
+.nike-green {
+    position: relative;
+    bottom: 50px;
+    width: 130%;
+    z-index: 11;
 }
 
-.img__arrow {
+.nike__group {
+    display: flex;
+    gap: 35px;
+    right: -140px;
+    bottom: 40px;
     position: absolute;
-    top: 229px;
-    left: -5px;
-    z-index: 10;
 }
 
-.img__nike-green {
-    position: absolute;
-    top: -30px;
-    left: -70px;
-    z-index: 10;
+.nike__group-ellipse {
+    box-sizing: border-box;
+    border: 1px solid rgb(245, 245, 245);
+    border-radius: 50%;
+    padding: 12px;
+    background: #f5f5f5;
 }
 
-.img__shadow {
-    position: absolute;
-    right: -680px;
-    bottom: 15px;
+.nike__group-ellipse:first-child {
+    background: #b6e247;
 }
 
 
-.img__nike-group {
-    position: absolute;
-    bottom: 0px;
-    right: -690px;
-    z-index: 10;
+@media (max-width: 1400px) {
+    .line {
+        max-height: 140%;
+        top: -385px;
+        right: -385px;
+    }
+
+    .nike-green {
+        width: 120%;
+    }
+
+    .nike__group {
+        right: -80px;
+        bottom: 0px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .line {
+        max-height: 135%;
+        top: -390px;
+        right: -355px;
+    }
+
+    .nike-green {
+        width: 110%;
+    }
+
+    .nike__group {
+        right: -30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nike__group {
+        right: 0px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .hero__inner {
+        gap: 30px;
+    }
+
+    .hero__img {
+        display: flex;
+    }
+
+    .line {
+        max-height: 135%;
+        top: -335px;
+        right: -315px;
+    }
+
+    .nike-green {
+        align-self: center;
+    }
+}
+
+@media (max-width: 950px) {
+    .hero__inner {
+        display: block;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .nike-green {
+        width: 100%;
+    }
 }
 
 /* ========================================================================== */
@@ -373,7 +493,7 @@ html {
     position: relative;
 }
 
-.ramka {
+.advantage-frame {
     width: 636px;
     height: 568px;
     border: 20px solid #e5f2e1;
@@ -384,14 +504,30 @@ html {
 }
 
 .advantage__photo-img {
-    margin:40px -113px;
+    margin: 40px -113px;
 }
 
 .advantage__list {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 26px;
 }
+
+.advantage__content {
+    background: url(..//img/nike-advantage.svg);
+
+}
+
+.advantage__content img {
+    overflow: hidden;
+}
+
+/* .advantage__content-img {
+    
+    position: absolute;
+    margin-left: -80px;
+} */
 
 .advantage__title {
     text-align: start;
@@ -404,4 +540,3 @@ html {
     gap: 16px;
     align-items: center;
 }
-
