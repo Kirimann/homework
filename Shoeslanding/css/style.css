@@ -10,6 +10,10 @@
     color: var(--general-text);
 }
 
+.body--opened-menu {
+    overflow: hidden;
+}
+
 .wrapper {
     min-height: 100%;
     width: 100%;
@@ -24,6 +28,60 @@
     margin: 0 auto;
     padding: 0 15px;
     height: 100%;
+}
+
+/* =============================================== */
+
+.header {
+    background-color: #EBFFE4;
+    margin-bottom: 115px;
+    height: 100%;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 44px;
+    margin-bottom: 120px;
+}
+
+.header__logo {
+    max-width: 94px;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.nav__item {
+    display: flex;
+    gap: 30px;
+}
+
+.nav__link {
+    display: block;
+    padding: 5px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.nav__link::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -13px;
+    width: 34px;
+    height: 34px;
+    background: #000000;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: all .5;
+}
+
+.nav__link:hover::before {
+    opacity: 1;
 }
 
 .burger-icon {
@@ -79,35 +137,6 @@
 .body--opened-menu .burger-icon span::after {
     bottom: 0px;
     transform: rotate(-45deg);
-}
-
-/* =============================================== */
-
-.header {
-    background-color: #EBFFE4;
-    margin-bottom: 115px;
-    height: 100%;
-}
-
-.header__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 44px;
-    margin-bottom: 120px;
-}
-
-.header__logo {
-    max-width: 94px;
-}
-
-.header__logo img {
-    width: 100%;
-}
-
-.nav__item {
-    display: flex;
-    gap: 30px;
 }
 
 .button {
@@ -321,6 +350,51 @@
 }
 
 @media (max-width: 950px) {
+
+    .header__nav {
+        position: fixed;
+        inset: 0;
+        z-index: 10;
+        background: var(--general-bg);
+        padding: 25vh 15px 30px;
+        font-size: 24px;
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+    }
+
+    .header__top .button {
+        display: none;
+    }
+
+    .nav__item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .accordion-content {
+        gap: 30px;
+    }
+
+    .accordion-list__controls {
+        padding: 20px 30px;
+    }
+
+    .accordion-list__controls-title {
+        font-size: 35px;
+    }
+
+    .body--opened-menu .header__nav {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .burger-icon {
+        display: flex;
+    }
+
     .hero__inner {
         display: block;
         text-align: center;
